@@ -4,7 +4,7 @@ import openai
 app = Flask(__name__)
 
 # Set your OpenAI API key here
-openai.api_key = "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"
+openai.api_key = "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"
 
 @app.route("/")
 def index():
@@ -40,4 +40,5 @@ def generate_blog_post(topic):
 
     generated_content = response.choices[0].text.strip()
     return generated_content
+print("Received topic:", topic)
 
